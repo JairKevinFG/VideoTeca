@@ -15,6 +15,15 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|gif|jpg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: { name: 'assets/[hash].[ext]' },
+                    }
+                ],
+            },
+            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
@@ -32,12 +41,13 @@ module.exports = {
             {
                 test: /\.(s*)css$/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    },
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
                     'css-loader',
-                    'sass-loader'
-                ]
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
             }
         ]
     },

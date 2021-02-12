@@ -1,9 +1,6 @@
-import React from "react";
-//react dom empuja lo que hacemos con react hacia el navegador
-import ReactDOM  from 'react-dom';
-import HelloWorld from "./components/HelloWorld";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './containers/App';
 
-ReactDOM.render(<HelloWorld /> , document.querySelector('#app'));
-
-
+ReactDOM.render(<App /> , document.getElementById('app'));
 

@@ -1,0 +1,66 @@
+.carousel-item {
+
+    width: 230px;
+    height: 280px;
+    border-radius: 30px;
+    overflow: hidden; /* Hidden para que la imagen tome los estilos*/
+    margin-right: 10px;
+    display: inline-block; /*inline block : un item al lado de otro */
+    cursor: pointer;
+    transition: 450ms all;  /*suaviza la transicion  */
+    transform-origin:center left; /*Ajusta los elementos para que no se salgan  y empiezen de izq a derecha */
+    position: relative;
+}
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(125px,0,0); /* Desplaza los elementos hacia la derecha , ~ : Selecciona todos los elementos excepto el elemento que está  seleccionado */
+}
+
+.carousel-item__img {
+    width: 250px;
+    height: 300px;
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top,rgba(0,0,0,0.9)0%,rgba(0,0,0,0)100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    
+    position: absolute;
+    top: 170px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.carousel-item__details--title {
+    color: white;
+    font-size: 15px;
+    margin-left:15px ;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+}
+
+
+.carousel-item__details--subtitle {
+    color: white;
+    font-size: 15px;
+    margin-left:15px ;
+    margin-top: 0px;
+}
+
+
+.carousel-item__details--img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+.carousel-item:hover .carousel-item__details{
+    opacity: 1;
+}   

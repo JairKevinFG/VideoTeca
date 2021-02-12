@@ -1,0 +1,30 @@
+
+.carousel {
+
+    width: 100%;
+    overflow: scroll; /* propiedad de scroll  */
+    padding: 20px;
+    position: relative; /* todos los elementos dentro de carousel se posicionan en relacion a este (que es el padre)  */
+}
+::-webkit-scrollbar{
+    display: none;  /* Ocultar scroll */
+  }
+.carousel__container {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    white-space:nowrap; /*nowrap enlista todos los elementos en un solo reglon  */
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    font-size: 0;
+}
+
+
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5); /* Escala en 1.5 la imagen seleccionada   */
+    opacity: 1; /* Cuando se le haga hover a un elemento en especfigico pone la opacidad en 1*/
+}
+

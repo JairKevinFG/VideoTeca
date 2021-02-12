@@ -1,0 +1,34 @@
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 0px 0px 40px 40px;
+
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+    
+}
+
+.input {
+    background-color: rgba(255,255,255, 0.1);
+    border: 2px solid white;
+    border-radius:30px;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline-style: none;
+ 
+}
+
+::placeholder {
+    color: white;
+}
